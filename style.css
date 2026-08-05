@@ -12,36 +12,37 @@ body {
   line-height: 1.6;
   color: #2d3748;
   background-color: #f8fafc;
-  max-width: 850px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 40px 20px 80px;
 }
 
-/* Header & Nav */
+/* Header & Nav (すべて中央寄せ) */
 header {
+  text-align: center;
   margin-bottom: 40px;
 }
 
 header h1 {
   font-size: 2.2rem;
   color: #1a202c;
-  margin: 0 0 6px 0;
+  margin: 0 0 8px 0;
 }
 
-/* 1本目の線：肩書（.subtitle）の下に引く */
+/* 1本目の線：肩書の下 */
 .subtitle {
   color: #4a5568;
   font-size: 1.1rem;
   font-weight: 500;
-  margin: 0 0 16px 0;
-  padding-bottom: 16px;
-  border-bottom: 2px solid #e2e8f0;
+  margin: 0 0 20px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
 }
 
-/* 2本目の線：目次（.nav-container）の下に引く */
+/* 2本目の線：目次（ナビゲーション）の下 */
 .nav-container {
-  padding-bottom: 16px;
-  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .nav-menu {
@@ -50,7 +51,8 @@ header h1 {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  justify-content: center; /* 目次を中央寄せ */
+  gap: 16px;
 }
 
 .nav-menu a {
@@ -58,7 +60,7 @@ header h1 {
   color: #4a5568;
   font-weight: 600;
   font-size: 0.95rem;
-  padding: 6px 12px;
+  padding: 8px 16px;
   border-radius: 6px;
   transition: all 0.2s ease;
 }
@@ -68,17 +70,23 @@ header h1 {
   background-color: #edf2f7;
 }
 
-/* Sections */
+/* Sections (各区切りの明確化) */
 section {
-  margin-top: 40px;
+  margin-top: 50px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #1a202c;
-  border-bottom: 2px solid #e2e8f0;
-  padding-bottom: 8px;
+  margin-top: 0;
   margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #0366d6; /* 各セクションタイトルの下に青いアクセント線 */
 }
 
 p {
@@ -91,19 +99,15 @@ p {
   line-height: 1.7;
 }
 
-.section-intro {
-  margin-bottom: 20px;
-}
-
-/* Cards (Skills Grid) */
+/* Skills Grid */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 20px;
   margin-top: 20px;
 }
 
-/* Cards (Projects Container) */
+/* Projects Container */
 .projects-container {
   display: flex;
   flex-direction: column;
@@ -111,20 +115,18 @@ p {
   margin-top: 20px;
 }
 
-/* Shared Card Styling */
+/* Shared Inner Card Styling */
 .skill-card, .project-card {
-  background-color: #ffffff;
+  background-color: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .skill-card:hover, .project-card:hover {
   transform: translateY(-2px);
   border-color: #0366d6;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .skill-card h3, .project-header h3 {
@@ -141,7 +143,7 @@ p {
 }
 
 .skill-card li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-size: 0.92rem;
   color: #4a5568;
 }
@@ -160,8 +162,8 @@ p {
 }
 
 .tag {
-  background-color: #edf2f7;
-  color: #4a5568;
+  background-color: #e2e8f0;
+  color: #2d3748;
   font-size: 0.78rem;
   font-weight: 600;
   padding: 3px 8px;
@@ -171,8 +173,9 @@ p {
 /* Contact Links */
 .contact-links {
   display: flex;
-  gap: 12px;
-  margin-top: 20px;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
   flex-wrap: wrap;
 }
 
@@ -180,7 +183,7 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 6px;
   font-size: 0.95rem;
   font-weight: 600;
@@ -209,8 +212,6 @@ p {
 /* Footer */
 footer {
   margin-top: 60px;
-  padding-top: 20px;
-  border-top: 1px solid #e2e8f0;
   text-align: center;
   font-size: 0.88rem;
   color: #718096;
