@@ -226,47 +226,37 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ナビゲーションバー */
-.navbar {
-  position: sticky;
-  top: 0;
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(5px);
-  border-bottom: 1px solid #e2e8f0;
-  z-index: 1000;
-  padding: 10px 0;
-}
-
+/* ナビゲーション全体のレイアウト */
 .nav-container {
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+  margin: 20px 0 30px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e8f0;
 }
 
-.nav-logo {
-  font-weight: bold;
-  color: #0366d6;
-}
-
-.nav-links {
+/* 箇条書きポチを消して横並びにする */
+.nav-menu {
   list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* スマホ表示時に自動で折り返す設定 */
+  gap: 20px;       /* 項目同士の間隔 */
+  justify-content: flex-start; /* 左寄せ（中央寄せにしたい場合は center ） */
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #4a5568;
-  font-weight: 500;
-  font-size: 0.9rem;
-  transition: color 0.2s;
+/* リンクのデザイン */
+.nav-menu a {
+  text-decoration: none; /* 下線を消す */
+  color: #4a5568;        /* 落ち着いたダークグレー */
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
 }
 
-.nav-links a:hover {
+/* マウスをのせた時の変化（ホバーエフェクト） */
+.nav-menu a:hover {
   color: #0366d6;
+  background-color: #f0f6ff; /* うっすら青い背景色 */
 }
