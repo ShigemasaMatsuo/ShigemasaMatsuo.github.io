@@ -19,9 +19,7 @@ body {
 
 /* Header & Nav */
 header {
-  border-bottom: 2px solid #e2e8f0;
-  padding-bottom: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 header h1 {
@@ -30,15 +28,20 @@ header h1 {
   margin: 0 0 6px 0;
 }
 
+/* 1本目の線：肩書（.subtitle）の下に引く */
 .subtitle {
   color: #4a5568;
   font-size: 1.1rem;
   font-weight: 500;
-  margin: 0 0 20px 0;
+  margin: 0 0 16px 0;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e2e8f0;
 }
 
+/* 2本目の線：目次（.nav-container）の下に引く */
 .nav-container {
-  margin-top: 15px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e2e8f0;
 }
 
 .nav-menu {
