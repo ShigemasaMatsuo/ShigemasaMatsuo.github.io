@@ -172,6 +172,51 @@ footer {
   color: #4a5568;
 }
 
+/* Contact Section Styling */
+#contact {
+  text-align: center;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.linkedin-btn {
+  background-color: #0a66c2;
+  color: #ffffff;
+}
+
+.linkedin-btn:hover {
+  background-color: #084e96;
+  transform: translateY(-2px);
+}
+
+.email-btn {
+  background-color: #24292e;
+  color: #ffffff;
+}
+
+.email-btn:hover {
+  background-color: #1b1f23;
+  transform: translateY(-2px);
+}
+
 .project-body strong {
   color: #2d3748;
 }
